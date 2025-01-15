@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Feedback System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .upload-section, .criteria-section, .result-section {
+            margin-bottom: 20px;
+        }
+        .upload-section input, .criteria-section input {
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .upload-btn, .submit-btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .upload-btn:hover, .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI Feedback System</h1>
+
+        <!-- File Upload Section -->
+        <div class="upload-section">
+            <label for="file-upload">Upload CSV File:</label>
+            <input type="file" id="file-upload" accept=".csv">
+            <button class="upload-btn">Upload File</button>
+        </div>
+
+        <!-- Criteria Input Section -->
+        <div class="criteria-section">
+            <label for="criteria-input">Enter AI Feedback Criteria:</label>
+            <input type="text" id="criteria-input" placeholder="e.g., clarity, content depth, structure">
+            <button class="submit-btn">Submit Criteria</button>
+        </div>
+
+        <!-- Results Section -->
+        <div class="result-section">
+            <h2>AI Feedback Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Answer</th>
+                        <th>AI Feedback</th>
+                    </tr>
+                </thead>
+                <tbody id="result-body">
+                    <!-- Example result row (dynamic content will go here) -->
+                    <tr>
+                        <td>Alice</td>
+                        <td>The Industrial Revolution changed society by...</td>
+                        <td>Social changes were a key theme.</td>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>The key factors of the Industrial Revolution were...</td>
+                        <td>Mechanization and urbanization were critical.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Placeholder for the file upload and result handling logic
+        document.querySelector('.upload-btn').addEventListener('click', () => {
+            alert('File uploaded! (This is a placeholder action)');
+        });
+
+        document.querySelector('.submit-btn').addEventListener('click', () => {
+            const criteria = document.querySelector('#criteria-input').value;
+            if (criteria) {
+                alert('Criteria submitted: ' + criteria);
+            } else {
+                alert('Please enter criteria');
+            }
+        });
+    </script>
+
+</body>
+</html>
